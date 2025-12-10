@@ -18,12 +18,20 @@ class StringCalculator {
     // split by comma, newline or custom delimiter
     final parts = numbers.split(separator);
 
-    return parts
+    final values = parts
         .where((part) => part.trim().isNotEmpty)
         .map((part) => int.parse(part.trim()))
-        .fold(
-          0,
-          (sum, value) => sum + value,
-        );
+        .toList();
+
+    final negatives = values.where((value) => value < 0).toList();
+
+    if (negatives.isNotEmpty) {
+      throw Exception('negative numbers not allowed ${negatives.join(',')}');
+    }
+
+    return values.fold(
+      0,
+      (sum, value) => sum + value,
+    );
   }
 }
