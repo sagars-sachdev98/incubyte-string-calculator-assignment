@@ -3,7 +3,8 @@ class StringCalculator {
     if (numbers.trim().isEmpty) {
       return 0;
     }
-    // ll handle other cases later
-    throw UnimplementedError();
+
+    // for now assume it's a single number input
+    return int.parse(numbers.trim());
   }
 }
