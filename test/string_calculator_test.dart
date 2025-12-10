@@ -45,6 +45,15 @@ void main() {
 
         expect(result, 13);
       });
+
+      test(
+        'supports newlines between numbers along with commas',
+        () {
+          final result = calculator.add('1\n2,3');
+
+          expect(result, 6);
+        },
+      );
     },
   );
 }
