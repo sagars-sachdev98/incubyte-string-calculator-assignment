@@ -63,6 +63,17 @@ void main() {
           expect(result, 3);
         },
       );
+
+      test(
+        'throws when input contains a negative number',
+        () {
+
+          expect(
+            () => calculator.add('1,-2,3'),
+            throwsA(isA<Exception>()),
+          );
+        },
+      );
     },
   );
 }
