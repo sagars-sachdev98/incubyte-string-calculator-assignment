@@ -1,6 +1,9 @@
 class StringCalculator {
   int add(String numbers) {
-    // initial dummy implementation, ll be improved as per TDD
+    if (numbers.trim().isEmpty) {
+      return 0;
+    }
+    // ll handle other cases later
     throw UnimplementedError();
   }
 }
