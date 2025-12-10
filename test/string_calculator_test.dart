@@ -67,11 +67,26 @@ void main() {
       test(
         'throws when input contains a negative number',
         () {
-
           expect(
             () => calculator.add('1,-2,3'),
             throwsA(isA<Exception>()),
           );
+        },
+      );
+
+      test(
+        'include all negative numbers in the exception message',
+        () {
+          try {
+            calculator.add('1,-2,3,-5');
+            fail('Expected Exception for negative numbers');
+          } on Exception catch (e) {
+            // toString() for Exception will contain our message
+            expect(
+              e.toString(),
+              'Exception: negative numbers not allowed -2,-5',
+            );
+          }
         },
       );
     },
