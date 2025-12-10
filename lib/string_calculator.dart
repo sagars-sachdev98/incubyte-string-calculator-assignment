@@ -5,9 +5,13 @@ class StringCalculator {
       return 0;
     }
 
-    final parts = trimmed.split(',');
+    // split by comma or newline
+    final parts = trimmed.split(RegExp(r'[,\n]'));
 
-    return parts.map((part) => int.parse(part)).fold(
+    return parts
+        .where((part) => part.trim().isNotEmpty)
+        .map((part) => int.parse(part.trim()))
+        .fold(
           0,
           (sum, value) => sum + value,
         );
