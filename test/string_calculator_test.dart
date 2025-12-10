@@ -54,6 +54,15 @@ void main() {
           expect(result, 6);
         },
       );
+
+      test(
+        'supports custom delimiter header',
+        () {
+          final result = calculator.add('//;\n1;2');
+
+          expect(result, 3);
+        },
+      );
     },
   );
 }
