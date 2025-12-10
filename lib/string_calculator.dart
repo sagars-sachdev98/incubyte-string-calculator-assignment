@@ -5,8 +5,18 @@ class StringCalculator {
       return 0;
     }
 
-    // split by comma or newline
-    final parts = trimmed.split(RegExp(r'[,\n]'));
+    var separator = ',';
+
+    if (numbers.startsWith('//')) {
+      final newlineIndex = numbers.indexOf('\n');
+      separator = numbers.substring(2, newlineIndex);
+      numbers = numbers.substring(newlineIndex + 1);
+    }
+
+    numbers = numbers.replaceAll('\n', separator);
+
+    // split by comma, newline or custom delimiter
+    final parts = numbers.split(separator);
 
     return parts
         .where((part) => part.trim().isNotEmpty)
