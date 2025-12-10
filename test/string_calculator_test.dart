@@ -5,11 +5,17 @@ void main() {
   group(
     'StringCalculator.add',
     () {
+      late StringCalculator calculator;
+
+      setUp(
+        () {
+          calculator = StringCalculator();
+        },
+      );
+
       test(
         'returns 0 for empty string input',
         () {
-          final calculator = StringCalculator();
-
           final result = calculator.add('');
 
           expect(result, 0);
@@ -19,8 +25,6 @@ void main() {
       test(
         'returns the number itself if single number input',
         () {
-          final calculator = StringCalculator();
-
           final result = calculator.add('1');
 
           expect(result, 1);
@@ -30,8 +34,6 @@ void main() {
       test(
         'returns sum of two comma separated numbers',
         () {
-          final calculator = StringCalculator();
-
           final result = calculator.add('1,5');
 
           expect(result, 6);
@@ -39,9 +41,6 @@ void main() {
       );
 
       test('returns sum for n number of comma separated numbers', () {
-
-        final calculator = StringCalculator();
-
         final result = calculator.add('1,5,3,4');
 
         expect(result, 13);
