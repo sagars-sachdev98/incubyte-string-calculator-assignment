@@ -1,5 +1,20 @@
+import 'package:incubyte_string_calculator_assignment/string_calculator.dart';
 import 'package:test/test.dart';
 
 void main() {
-  // Tests for StringCalculator will go here.
+  group(
+    'StringCalculator.add',
+    () {
+      test(
+        'returns 0 for empty string input',
+        () {
+          final calculator = StringCalculator();
+
+          final result = calculator.add('');
+
+          expect(result, 0);
+        },
+      );
+    },
+  );
 }
