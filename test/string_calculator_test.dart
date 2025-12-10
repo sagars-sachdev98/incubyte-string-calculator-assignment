@@ -37,6 +37,15 @@ void main() {
           expect(result, 6);
         },
       );
+
+      test('returns sum for n number of comma separated numbers', () {
+
+        final calculator = StringCalculator();
+
+        final result = calculator.add('1,5,3,4');
+
+        expect(result, 13);
+      });
     },
   );
 }
