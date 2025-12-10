@@ -26,6 +26,17 @@ void main() {
           expect(result, 1);
         },
       );
+
+      test(
+        'returns sum of two comma separated numbers',
+        () {
+          final calculator = StringCalculator();
+
+          final result = calculator.add('1,5');
+
+          expect(result, 6);
+        },
+      );
     },
   );
 }
