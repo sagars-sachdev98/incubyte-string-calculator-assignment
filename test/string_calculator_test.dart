@@ -15,6 +15,17 @@ void main() {
           expect(result, 0);
         },
       );
+
+      test(
+        'returns the number itself if single number input',
+        () {
+          final calculator = StringCalculator();
+
+          final result = calculator.add('1');
+
+          expect(result, 1);
+        },
+      );
     },
   );
 }
