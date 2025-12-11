@@ -1,39 +1,60 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Incubyte String Calculator (Dart TDD Kata)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+A small Dart implementation of the Incubyte String Calculator TDD Kata, focused on clean, readable code and a test-first (TDD) approach.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
+---
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Table of Contents
 
-## Features
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the tests](#running-the-tests)
+- [Tech Stack](#tech-stack)
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+---
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+This is a plain Dart package that implements a StringCalculator and a small test suite.
 
-## Usage
+Clone the repo, install dependencies and run the tests to see the kata in action.
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
 
-```dart
-const like = 'sample';
-```
+## Prerequisites
 
-## Additional information
+- [Dart SDK (or Flutter SDK, which includes Dart)](https://dart.dev/get-dart)
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+
+## Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/sagars-sachdev98/incubyte-string-calculator-assignment
+   ```
+
+2. Go into the project directory:
+
+   ```
+   cd incubyte-string-calculator-assignment
+   ```
+
+3. Install dependencies:
+   ```
+   dart pub get
+   ```
+
+## Running the tests
+
+From the project root:
+ ```
+ dart test
+ ```
+All tests should pass.
+
+## Tech Stack
+
+Language: Dart
+
+Testing: package:test
