@@ -29,9 +29,9 @@ class StringCalculator {
       throw Exception('negative numbers not allowed ${negatives.join(',')}');
     }
 
-    return values.fold(
-      0,
-      (sum, value) => sum + value,
-    );
+    return values.where((val) => val <= 1000).fold(
+          0,
+          (sum, value) => sum + value,
+        );
   }
 }
