@@ -89,6 +89,15 @@ void main() {
           }
         },
       );
+
+      test(
+        'ignores numbers greater than 1000',
+        () {
+          final result = calculator.add('2,1001');
+
+          expect(result, 2);
+        },
+      );
     },
   );
 }
