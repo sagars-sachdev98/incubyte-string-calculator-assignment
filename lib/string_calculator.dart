@@ -1,7 +1,7 @@
 class StringCalculator {
   int add(String numbers) {
     final trimmed = numbers.trim();
-    if (trimmed.trim().isEmpty) {
+    if (trimmed.isEmpty) {
       return 0;
     }
 
